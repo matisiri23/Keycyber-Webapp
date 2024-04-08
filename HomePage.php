@@ -1,6 +1,13 @@
-<?php include_once("main.php") ?>
+<?php include_once("main.php");
+//session_start();
+//if(!isset($_SESSION['First_name']) || empty($_SESSION['First_name'])) {
+//    header("Location: index.php");
+//    exit;
+//}
 
-<nav style="background-color: #32a6a8" class="navbar navbar-expand-lg ">
+?>
+
+<nav style="background-color: #32a6a8" class="navbar navbar-expand-lg fixed-top ">
     <div class="container-fluid">
         <a class="navbar-brand text-white fw-bold" href="#">KeyCyber</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -20,17 +27,20 @@
                 <li class="nav-item">
                     <a class="nav-link text-white" href="#">Users</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link disabled text-white">Disabled</a>
-                </li>
-            </ul>
-            <ul class="navbar-nav ms-auto">
-                <li class="nav-item">
-                    <a class="nav-link btn btn-link text-white" href="/Login/index.php">Logout</a>
-                </li>
+
             </ul>
         </div>
     </div>
+
+
+<!--    <h5><i class="fa fa-user text-white m-2" ></i></h5>  <h6 class="text-white">--><?php //echo $_SESSION['First_name']?><!--</h6>-->
+<!---->
+<!---->
+<!--    </ul>-->
+<!--    <form action="" method="post" style="width: 60px;margin-right: 60px;margin-left: 20px">-->
+<!--        <button type="submit" class="btn btn-secondary " name="submit" value="  --><?php //session_destroy();?><!--">Logout</button>-->
+<!--    </form>-->
+
 </nav>
 
 
@@ -58,6 +68,7 @@
  function task(){
      document.getElementById("myIframe").src="Task.php";
  }
+
 
 
 </script>

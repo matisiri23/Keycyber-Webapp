@@ -63,7 +63,7 @@
         <div class="col-md-4">
             <div class="login-box">
                 <h2>Login</h2>
-                <form action="/HomePage.php" method="post">
+                <form action="" method="post">
                     <div class="form-group">
                         <label for="email">Email</label>
                         <input type="email" name="email" id="email" required>
@@ -81,3 +81,35 @@
                         <p class="text-white p-3" >Copyright © 2024 KeyCyber. All rights reserved.</p>
                     </div>
                 </footer>
+
+
+<?php
+session_start();
+//These values are for the connection to the SQL server
+$server_name = "localhost";
+$username = "select";
+$password = "-@OYhU9y6k*htzhQ";
+
+//Establishing a new connection to the server
+$conn = new mysqli($server_name, $username, $password);
+
+if ($conn->connect_error){
+    die("Connection failed: " . $conn->connect_error);
+}
+
+if(isset($_POST['email']) & isset($_POST['password'])){
+    $stmt = $conn->prepare("SELECT * from mati.user WHERE Email = ?");
+    $stmt->bind_param('s', $_POST['email']);
+    $stmt->execute();
+    $result = $stmt->get_result();
+    $row = $result->fetch_assoc();
+    $DB_email = $row['Email'];
+    $DB_password = $row['Password'];
+    $_SESSION['First_name'] = $row['First_name'];
+    if(password_verify($_POST['password'], $DB_password)){
+        header("Location: HomePage.php");
+
+    } else {
+        echo "Login Unsuccessful - Please try again";
+    }
+}
