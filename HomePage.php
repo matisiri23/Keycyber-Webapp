@@ -9,7 +9,7 @@
 
 <nav style="background-color: #32a6a8" class="navbar navbar-expand-lg fixed-top ">
     <div class="container-fluid">
-        <a class="navbar-brand text-white fw-bold" href="#">KeyCyber</a>
+        <a class="navbar-brand text-white fw-bold" href="HomePage.php">KeyCyber</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>

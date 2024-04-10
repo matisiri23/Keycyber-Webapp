@@ -164,7 +164,7 @@
         </tr>
         </thead>
         <tbody>
-
+        <form method="post" action="taskedit.php">
         <?php
 
         //These values are for the connection to the SQL server
@@ -184,7 +184,7 @@
             $stmt->execute();
             $result = $stmt->get_result();
              while ($row = $result->fetch_assoc()) {
-
+                 $taskid = htmlspecialchars($row['Task_id']);
             $taskname = htmlspecialchars($row['Task_name']);
             $Description = htmlspecialchars($row['Description']);
             $tdate = htmlspecialchars($row['taskdate']);
@@ -201,15 +201,16 @@
             <td>'.$Priority.'</td>
             <td>'.$Status.'</td>
             <td>'.$assigned_by.'</td>
+            
             <td><button class="btn btn-danger">Delete</button></td>
-            <td><button class="btn btn-primary">Edit</button></td>
+            <td><button class="btn btn-primary" name="edit" value='.$taskid.'>Edit</button></td>
         </tr>
         
             ';
              }
 
         ?>
-
+        </form>
 
         </tbody>
     </table>
