@@ -119,7 +119,7 @@ Keycyber
                 }
                 else{
                     echo '<div class="alert alert-warning alert-dismissible fade show" role="alert">
-  <strong>Error</strong> Paasword Does Not Match.
+  <strong>Error</strong> Email Does Not Match.
   <button type="button" class="close" data-dismiss="alert" aria-label="Close">
     <span aria-hidden="true">&times;</span>
   </button>
@@ -128,12 +128,6 @@ Keycyber
             }
 
             else{
-                echo '<div class="alert alert-warning alert-dismissible fade show" role="alert">
-  <strong>Error</strong> Email Does Not Match.
-  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-    <span aria-hidden="true">&times;</span>
-  </button>
-</div>';
 
         }
 

@@ -25,7 +25,7 @@
                     <a class="nav-link text-white " onclick="createtask()"   href="#" id="createtask">Create Task</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-white" href="#">Users</a>
+                    <a class="nav-link text-white"  href="#" onclick="user()">Users</a>
                 </li>
 
             </ul>
@@ -68,7 +68,9 @@
  function task(){
      document.getElementById("myIframe").src="Task.php";
  }
-
+ function user(){
+     document.getElementById("myIframe").src="Users.php";
+ }
 
 
 </script>

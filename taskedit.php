@@ -40,7 +40,7 @@
     ?>
 
 
-<div class="container p-5 m-4">
+<div class=" p-5 m-4">
 
     <h1>Add Task</h1>
     <hr>
